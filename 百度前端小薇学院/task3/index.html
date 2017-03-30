@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: top;
+        }
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1; /*IE/7/6*/
+        }
+        .warp{
+            margin: 20px;
+            background-color: #eee;
+            border: 1px solid #999;
+            padding: 20px;
+            min-width: 500px;
+        }
+        .team-intro{
+            width: 160px;
+            background-color: white;
+            padding: 20px;
+            position: relative;
+            float: left;
+        }
+        .team-intro .team-name{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+        }
+        .team-intro .team-logo{
+            width: 80px;
+            height:80px;
+            background-color: #eee;
+        }
+        .team-intro .team-logo img{
+            width: 80px;
+            height: 80px;
+        }
+        .sidebar{
+            width: 120px;
+            background-color: white;
+            float: right;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .sidebar .person-logo img{
+            width: 80px;
+            height: 80px;
+            background-color: #eee;
+            margin-top:20px;
+        }
+        .main{
+            background-color: white;
+            margin: 0 140px 0 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp clearfix">
+        <div class="team-intro">
+            <div class="team-name">秦时明月</div>
+            <div class="team-logo">
+                <img src="images/logo.jpeg"/>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="person-intro">
+                <div class="person-logo">
+                    <img src="images/logo.jpeg"/>
+                    <img src="images/logo.jpeg"/>
+                    <img src="images/logo.jpeg"/>
+                    <img src="images/logo.jpeg"/>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <h2>秦时明月</h2>
+            <p>《秦时明月》系列是由杭州玄机科技信息技术有限公司制作的中国首部3D武侠电视/网络动画，于2007年春节期间起在中国全国各地正式首映，网络上亦有授权播出，已播出4部共100集。另有衍生出《天行九歌》等的仅在网络、不在电视播出的特别篇等。目前动画第5部《秦时明月之君临天下》正与《天行九歌》交替在每周四19：00网络更新，各自暂定至少60集。</p>
+            <p>该系列灵感来源于温世仁原著小说。时代背景从秦始皇兼并六国，建立中国首个帝国开始，到咸阳被楚军攻陷结束，时间跨度30年(包括回忆)，讲述一个体内流淌英雄之血的少年——荆天明，最终成长为盖世英雄，凭一己之力改变历史进程的热血励志故事（来源：官网[1]  ）。剧情并非采用一部一个剧情的系列剧形式，而是连续剧形式。剧情融武侠、历史、奇幻于一体，融入众多中国元素，引领观众亲历两千年前风起云涌、瑰丽多姿的古中国世界，在浓郁的中国风中注入鲜明的时代感。</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, form, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+h2{
+    padding-top: 40px;
+}
+h3{
+    font: 700 16px "微软雅黑";
+    color: #656565;
+}
+.author{
+    font: 400 14px "微软雅黑";
+    color: #656565;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+p{
+    font: 400 14px/28px "微软雅黑";
+    text-indent: 2em;
+}
+
+/*我的头部部分*/
+html body{
+    background-color: #DEDEDE;
+}
+
+header{
+    height: 60px;
+    background: #333;
+    min-width: 800px;
+}
+header img{
+    float: left;
+}
+header nav{
+    float: right;
+    height: 60px;
+}
+header nav ul li{
+    float: left;
+    margin-right: 25px;
+}
+header nav ul li a{
+    color: white;
+    font: 700 12px/60px "微软雅黑";
+    text-decoration: none;
+}
+header nav ul li.last a{
+    color: #D2DBE2;
+}
+/*我的内容部分*/
+.main{
+    min-width: 800px;
+}
+.warp{
+    margin-right: 450px;
+    min-width: 330px;
+    margin-left: 20px;
+}
+.content1,
+.content2,
+.content3,
+.aside,
+.photos{
+    background-color: white;
+    padding: 0 20px 20px;
+    box-shadow: 2px 2px #aaa;
+}
+.content2 ul{
+    list-style: none;
+    text-indent: 2em;
+    line-height: 24px;
+}
+.photos .every-photo{
+    width: 120px;
+    height: 120px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+    margin: 20px 20px 0;
+}
+.photos .every-photo span{
+    line-height: 30px;
+}
+.photos .every-photo img{
+    width: 100px;
+    height: 80px;
+}
+.content3 ul{
+    list-style: none;
+    text-indent: 2em;
+}
+.content3 .tables table{
+    width: 100%;
+}
+.content3 .tables th{
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+.content3 table tr:nth-last-of-type(1){
+    background-color: #eee;
+}
+.photos{
+    margin-top: 20px;
+}
+.photos ul li{
+    float: left;
+}
+.aside{
+    width: 365px;
+    height: 500px;
+    font: 400 12px/32px "宋体";
+    float: right;
+    margin: 20px 20px 0 0;
+}
+.aside h2{
+    border-left: 3px solid #aaa;
+    padding: 0;
+    font: 700 16px/38px "黑体";
+}
+.aside .item{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 5px 5px 0 0;
+}
+.aside .special{
+   display: block;
+   padding-left:105px;
+    text-indent: 0;
+    font: 400 12px "微软雅黑";
+    color: #ccc;
+}
+.aside textarea{
+    vertical-align: top;
+}
+aside input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: blue;
+    border-radius: 8px;
+    color: white;
+    margin: 10px 0 0 ;
+}
+footer{
+    margin-top: 20px;
+    height: 70px;
+    background-color: black;
+    text-align: center;
+
+}
+footer .copy{
+    color: white;
+    font:400 14px/70px "微软雅黑";;
+}

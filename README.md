@@ -6,3 +6,5 @@
 ### task3：[三栏式布局](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task3/index.html)
 ### task4：[定位和居中问题](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task4/index.html)
 ### task5：[HTML及CSS编码（二）](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task5/index.html)
+##斌斌学院部分
+### task1：[零基础JavaScript编码（一）](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task1/index.html)

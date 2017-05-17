@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <title>实现常见的技术产品官网的页面架构及样式布局</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo" id="top">
+                <a href="#">
+                    <img src="images/logo.png" alt="this is a logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="target">首页</a></li>
+                    <li><a href="#">最新活动</a></li>
+                    <li><a href="#">项目介绍</a></li>
+                    <li><a href="#">爱心社区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li class="login"><a href="#" ><span>登陆</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--导航条部分结束-->
+
+        <div class="banner">
+            <div class="intro">
+                <h2>Time of new life</h2>
+                <p>新时代，年轻的人们让我们一起</p>
+                <p>体验新生活，享受新生活</p>
+                <div class="enter">
+                    <a href="#">开始体验</a>
+                </div>
+            </div>
+         </div>
+        <!--banner部分结束-->
+
+        <div class="advantages">
+            <ul>
+                <li class="cell">
+                    <img src="images/advantage-pic1.png"/>
+                    <p>打造全新世界观，让你更爱你的生活</p>
+                </li>
+                <li class="cell">
+                    <img src="images/advantage-pic2.png"/>
+                    <p>丰富多彩的公益活动，发挥新世界的主人公意识</p>
+                </li>
+                <li class="cell">
+                    <img src="images/advantage-pic3.png"/>
+                    <p>时尚新理念，超前体验未知的生活</p>
+                </li>
+                <li class="cell">
+                    <img src="images/advantage-pic4.png"/>
+                    <p>完善的培养机制，培养你全新的世界观</p>
+                </li>
+            </ul>
+        </div>
+        <!--dvantages部分结束-->
+
+        <div class="other">
+            <img src="images/biglogo.png"/>
+            <p>关于新世界，你不知道的还有什么？</p>
+        </div>
+        <!--other部分结束-->
+
+        <div class="all-cities">
+            <div class="cover">
+                <h3>查找新世界城市活动信息</h3>
+                 <p>每个城市有不同的活动信息，请自主查询您所需要了解的城市</p>
+                 <form action="#" class="sel-cities">
+                     <div class="counties">
+                        <input type="radio" id="selectd1">
+                         <label for="selectd1"><span>国家</span></label>
+                         <ul class="sel-county">
+                             <li>中国</li>
+                             <li>美国</li>
+                         </ul>
+                     </div>
+                     <div class="province">
+                         <input type="radio" id="selectd2">
+                         <label for="selectd2"><span>省份</span></label>
+                         <ul class="sel-province">
+                             <li>北京市</li>
+                             <li>天津市</li>
+                             <li>河北省</li>
+                             <li>陕西省</li>
+                             <li>内蒙古自治区</li>
+                             <li>辽宁省</li>
+                         </ul>
+                     </div>
+                     <div class="cities">
+                         <input type="radio" id="selectd3">
+                         <label for="selectd3"><span>城市</span></label>
+                         <ul class="sel-citiy">
+                         </ul>
+                     </div>
+
+                     <input type="submit" value="搜索"></input>
+                 </form>
+            </div>
+        </div>
+        <!--all cities部分结束-->
+
+        <div class="exhibition">
+            <div class="cell">
+                <img src="images/exhi-pic1.jpg"/>
+                <h3>北京活动</h3>
+                <p>新社区大联盟</p>
+            </div>
+            <div class="cell">
+                <h3>上海活动</h3>
+                <p>夜上海新景观探索</p>
+                <img src="images/exhi-pic2.jpg"/>
+            </div>
+            <div class="cell">
+                <img src="images/exhi-pic3.jpg"/>
+                <h3>深圳活动</h3>
+                <p>全新海岸线观点站</p>
+            </div>
+            <div class="cell">
+                <img src="images/exhi-pic4.png"/>
+                <h3>香港活动</h3>
+                <p>奢侈消费大派送</p>
+            </div>
+        </div>
+        <!--exhibition部分结束-->
+
+        <div class="adv">
+            <div class="adv-left">
+                <h3>新世界 </h3>
+                <h4> TIME </h4>
+                <p> @新世界-北京 </p>
+                <p> 2016.04.01 </p>
+            </div>
+            <div class="adv-right">
+                <div class="carousel">
+                    <h3>新世界/<span>01</span></h3>
+                    <p class="para">新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+                    <p class="para2"><a href="#">更多详情</a></p>
+                    <div class="select">
+                        <a href="#"><img src="images/select-01.png"/></a>
+                        <a href="#"><img src="images/unselect-01.png"/></a>
+                        <a href="#"><img src="images/unselect-01.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--adv部分结束-->
+
+        <section>
+            <div class="redBox">
+                <h3>新时代</h3>
+                <h3>关于爱生活的我们</h3>
+                <div class="border"></div>
+                <div class="btn">
+                    <a href="#">更多详情</a>
+                </div>
+            </div>
+            <div class="whitebox">
+                <h3>新时代</h3>
+                <h3>关于爱生活的我们</h3>
+                <div class="border"></div>
+                <div class="btn">
+                    <a href="#">更多详情</a>
+                </div>
+            </div>
+            <div class="backbox"></div>
+        </section>
+        <!--section部分结束-->
+
+        <div class="register">
+            <div class="volunteer">
+                <h3>成为我们的志愿者</h3>
+                <div class="border"></div>
+                <p>新世界的大家庭需要每一个爱生活的人加入，如果你够年轻，有梦想，有激情</br>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+            </div>
+            <div class="volun-defi">
+                <div class="volun-defi1">
+                    <h3>新世界志愿者协议</h3>
+                    <p>加入新世界志愿者的人们必须遵守中华人民共和国的相关法律法规，并且本着平等自愿的原则......</p>
+                    <p class="af"><a href="#">more</a></p>
+                </div>
+                <div class="volun-defi1">
+                    <h3>新世界志愿者权利</h3>
+                    <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+                    <p class="af"><a href="#">more</a></p>
+                </div>
+                <div class="volun-defi1">
+                    <h3>更多条款</h3>
+                    <p class="af"><a href="#">more</a></p>
+                </div>
+            </div>
+            <div class="volun-regi">
+                <div class="right">
+                    <form>
+                        <input type="text" placeholder="姓名："/>
+                        <input type="text" placeholder="年龄："/>
+                        <input type="text" placeholder="联系方式："/>
+                        <input type="text" placeholder="联系地址："/>
+                        <textarea cols="30" rows="10" placeholder="请简单描述您梦想的生活："></textarea>
+                        <input type="submit" value="提交申请"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="connect">
+            <h3>联系我们</h3>
+            <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br>也可以通过以下任何方式关注我们的动态</p>
+            <div><input type="text" placeholder="someone@email.com"><button>提交</button></div>
+            <ul>
+                <li><a href="#"><img src="images/QQ.png" height="25" width="24"/></a></li>
+                <li><a href="#"><img src="images/sina.png" height="25" width="29"/></a></li>
+                <li><a href="#"><img src="images/bird.png" height="25" width="29"/></a></li>
+                <li><a href="#"><img src="images/web.png" height="25" width="24"/></a></li>
+            </ul>
+        </div>
+        <!--connect部分结束-->
+
+        <footer>
+            <p>@2016新世界</p>
+            <a href="#top">Back to top</a>
+        </footer>
+        <!--footer部分结束-->
+    </div>
+</body>
+</html>

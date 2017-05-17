@@ -1,0 +1,588 @@
+
+body{
+    min-width: 1280px;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*导航条部分开始*/
+header{
+    height: 57px;
+    width: 100%;
+}
+.logo{
+    padding: 13px 0 0 4.6%;
+    float: left;
+}
+nav{
+    float: right;
+    height: 54px;
+}
+nav ul li{
+    float: left;
+    text-align: center;
+}
+nav ul li a{
+    font: 14px/54px "微软雅黑";
+    display: block;
+    width: 100px;
+    color: rgb(120,123,131);
+}
+nav .target{
+    border-bottom: 3px solid red;
+    color: red;
+}
+nav .login{
+    margin-right: 67px;
+    margin-left: 8px;
+}
+nav .login a{
+    width: 32px;
+    height: 17px;
+    padding-left: 16px;
+    background: url("../images/login.png") no-repeat;
+    margin-top: 17px;
+    font: 14px "微软雅黑";
+    color: red;
+}
+/*导航条部分结束*/
+
+/*banner部分开始*/
+.banner{
+    width: 100%;
+    height: 690px;
+    background: url("../images/banner.png") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner .intro{
+    width: 480px;
+    position: absolute;
+    top: 230px;
+    left: 116px;
+}
+.banner h2{
+    font: 60px "微软雅黑";
+    color: white;
+}
+.banner p{
+    font: 21px/32px "微软雅黑";
+    color: white;
+    margin-left: 8px;
+}
+.banner .enter a{
+    display: block;
+    width: 330px;
+    height: 64px;
+    font: 30px/64px "微软雅黑";
+    color: white;
+    background-color: #e7504d;
+    text-align: center;
+    margin: 55px 0 0 10px;
+}
+/*banner部分结束*/
+
+/*advantages部分开始*/
+.advantages {
+    width: 100%;
+    height: 250px;
+}
+.advantages .cell{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.advantages .cell::after{
+    content: "";
+    width: 2px;
+    height: 50px;
+    background: #aaaaab;
+    position: absolute;
+    right: 0;
+    top: 134px;
+}
+.advantages .cell img{
+    padding: 40px 0 51px;
+}
+.advantages .cell p{
+    width: 154px;
+    font: 14px/18px "黑体";
+    margin: 0 auto;
+    color: #a1a2a2;
+}
+.advantages .cell p:hover{
+    color: red;
+}
+/*advantages部分结束*/
+
+/*other部分开始*/
+.other{
+    width: 100%;
+    height: 360px;
+    background-color: #ededec;
+    text-align: center;
+}
+.other img{
+    padding: 89px 0 48px;
+}
+.other p{
+    font: 54px/56px "黑体";
+    color: #a1a1a1;
+}
+/*other部分结束*/
+
+/*all-cities部分开始*/
+.all-cities{
+    height: 340px;
+    width: 100%;
+    background: url(../images/map.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.all-cities .cover{
+    height: 340px;
+    background-color: rgba(170, 50, 50, 0.2);
+}
+.all-cities h3{
+    font: 21px "微软雅黑";
+    color: #fff;
+    padding: 52px 0 0 0;
+}
+.all-cities h3::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px auto;
+   }
+.all-cities p{
+    font: 12px "微软雅黑";
+    color: #fff;
+    margin: 20px 0 52px;
+}
+.all-cities #selectd1,.all-cities #selectd2,.all-cities #selectd3{
+    display: none;
+}
+
+.all-cities .counties,.all-cities .province,.all-cities .cities{
+    float: left;
+    margin-left: 4%;
+}
+.all-cities .counties{
+    margin-left: 10%;
+}
+.all-cities label{
+    display: block;
+    width: 235px;
+    height: 36px;
+    color: #a1a1a1;
+    box-sizing: border-box;
+    font: 14px/36px "微软雅黑";
+    position: relative;
+    padding-right: 30px;
+    background: white url("../images/drop.png") no-repeat no-repeat 205px center;
+}
+.all-cities label span{
+    position: absolute;
+    left: 13px;
+}
+.all-cities .counties ul,.all-cities .province ul{
+    display: none;
+ }
+.all-cities .counties .sel-county li,.all-cities .province .sel-province li{
+    display: block;
+    width: 235px;
+    height: 25px;
+    padding-left: 33px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #89898a;
+    font:12px/25px "微软雅黑";
+    background-color: #E3E3E5;
+}
+.all-cities .counties input:checked~ul,.all-cities .province input:checked~ul{
+    display: block;
+}
+.all-cities .counties .sel-county li:hover,.all-cities .province .sel-province li:hover{
+    background:  url("../images/selected.png") no-repeat 9px center red;
+    color: white;
+}
+.all-cities .sel-cities input[type="submit"]{
+    background-color: #BE4F48;
+    letter-spacing: 20px;
+    font: 14px/36px "微软雅黑";
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    width: 235px;
+    height: 36px;
+    float: left;
+    margin-left: 4%;
+}
+/*all-cities部分结束*/
+
+/*exhibition开始*/
+.exhibition{
+    height: 505px;
+    background-color: #f8f8f7;
+    padding-top: 100px;
+}
+.exhibition .cell{
+    width: 18%;
+    height: 390px;
+    float: left;
+    text-align: center;
+}
+.exhibition .cell h2{
+    font: 14px "微软雅黑";
+}
+.exhibition .cell p{
+    font: 12px "微软雅黑";
+    color: #a1a2a2;
+    padding-top: 12px;
+}
+.exhibition .cell:nth-child(1){
+     margin: 0 1.66% 0 11.5%;
+ }
+.exhibition .cell:nth-child(2) h3{
+    margin-right: 1.66%;
+    font-size: 20px;
+    text-indent: 30px;
+    letter-spacing: 25px;
+}
+.exhibition .cell:nth-child(2) p{
+    padding-bottom: 10px;
+}
+.exhibition .cell:nth-child(4){
+    float: right;
+    margin: 0 11.5% 0 1.66%;
+}
+/*exhibition结束*/
+
+/*adv部分结束*/
+.adv{
+    width: 100%;
+    height: 565px;
+}
+.adv .adv-left{
+    width: 66.667%;
+    background: url("../images/advert-l1.jpg") no-repeat left;
+    height: 565px;
+    background-size: cover;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.adv-left::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 30px solid white;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 282px;
+    transform: translateY(-50%);
+}
+.adv .adv-left h3{
+    font: 50px/50px "微软雅黑";
+    color: white;
+    padding-top: 131px;
+}
+.adv .adv-left h4{
+    font: 158px/150px "微软雅黑";
+    color: white;
+    padding-bottom: 5px;
+}
+.adv .adv-left p{
+    font: 22px/45px "微软雅黑";
+    color: white;
+}
+.adv-right{
+    width: 33.333%;
+        float: left;
+}
+.adv-right h3{
+    font: 22px/22px "微软雅黑";
+    padding-top: 165px;
+    text-align: center;
+}
+.adv-right h3 span{
+    color: red;
+}
+.adv-right .para{
+    width: 290px;
+    font: 12px/30px "宋体";
+    color: #aaaaaa;
+    text-align: left;
+    margin: 22px auto;
+    padding-bottom: 26px;
+}
+.adv-right .para2 {
+    width: 105px;
+    height: 32px;
+    border: 1px solid red;
+    text-align: center;
+    margin: 24px auto;
+    }
+.adv-right .para2 a{
+    font: 12px/32px "微软雅黑";
+    color: red;
+}
+.adv-right .select{
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    padding-left: 50px;
+
+}
+.adv-right .select a{
+    float: left;
+}
+.adv-right .select a:nth-child(2){
+    padding: 0 14px;
+}
+/*adv部分开始*/
+
+/*section部分开始*/
+section{
+    height: 520px;
+    width: 100%;
+    text-align: center;
+}
+section .redBox,section .whitebox{
+    width: 33.33%;
+    background-color: #e74f4d;
+    height: 347px;
+    padding-top: 173px;
+    float: left;
+
+}
+section .redBox h3{
+    font: 20px/32px "微软雅黑";
+    color: white;
+}
+section .redBox .border,section .whitebox .border{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 25px auto;
+}
+section .redBox a,section .whitebox a{
+    display: block;
+    width: 166px;
+    height: 40px;
+    font: 21px/40px "微软雅黑";
+    border: 1px solid white;
+    color: white;
+    margin: 0 auto;
+}
+section .whitebox{
+    background-color: white;
+}
+section .whitebox h3{
+    font: 20px/32px "微软雅黑";
+    color: black;
+}
+section .whitebox .border{
+    background-color: #a1a1a1;
+}
+section .whitebox a{
+    border: 1px solid red;
+    color: red;
+}
+section .backbox{
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background: url("../images/backbox01.png") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+section .backbox::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid white;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 280px;
+    transform: translateY(-50%);
+}
+/*section部分开始*/
+
+/*register部分开始*/
+.register{
+    height: 750px;
+    width: 100%;
+}
+
+.register .volunteer{
+    padding-top: 120px;
+    text-align: center;
+}
+.register .volunteer h3{
+    font: 21px "微软雅黑";
+}
+.register .volunteer .border{
+    width: 30px;
+    height: 2px;
+    background-color: red;
+    margin: 10px auto;
+}
+.register .volunteer p{
+    font: 12px/18px "微软雅黑";
+    color: #a1a1a1;
+    padding-top: 4px;
+    padding-bottom: 108px;
+}
+.volun-defi{
+    width: 300px;
+    float: left;
+    margin-left: 11%;
+}
+.volun-defi h3{
+    font: 14px "黑体";
+    padding-bottom: 27px;
+}
+.volun-defi .volun-defi1:nth-of-type(2){
+    padding-top: 57px;
+}
+.volun-defi .volun-defi1:nth-of-type(3){
+    padding-top: 36px;
+}
+.volun-defi p{
+    font: 12px/22px "宋体";
+}
+.volun-defi .af{
+    float: right;
+
+}
+.volun-defi .af a{
+    color: #a1a1a1;
+    display: block;
+    width: 30px;
+    height: 12px;
+    padding-left: 15px;
+    background:url("../images/xiala.png") no-repeat left center;
+    line-height: 12px;
+}
+.volun-regi .right{
+    width: 700px;
+    height: 400px;
+    display: inline-block;
+    text-align: left;
+    font-size: 0;
+    float: right;
+    margin-right: 8%;
+    margin-left: 2%;
+}
+.volun-regi .right input[type="text"]{
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    color: #4E3A4F;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+}
+.volun-regi .right textarea{
+    width: 620px;
+    height: 160px;
+    font-size: 14px;
+    color: #4E3A4F;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+    resize:none;
+}
+.volun-regi .right input[type="submit"]{
+    width: 620px;
+    height: 40px;
+    font-size: 14px;
+    color: #4E3A4F;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+}
+/*register部分结束*/
+
+/*connect部分开始*/
+.connect{
+    height: 358px;
+    width: 100%;
+    background-color: #33363f;
+    text-align: center;
+}
+.connect h3{
+    font: 21px "黑体";
+    color: white;
+    padding-top: 92px;
+}
+.connect p{
+    padding: 6px 0 30px;
+    font: 12px/18px "宋体";
+    color: white;
+}
+.connect input[type="text"]{
+    width: 430px;
+    height: 40px;
+    vertical-align: middle;
+}
+.connect button{
+    height: 42px;
+    width: 80px;
+    background-color: #6f7178;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+    letter-spacing: 10px;
+}
+.connect ul{
+    width: 300px;
+    margin: 37px auto;
+
+}
+.connect ul li{
+    float: left;
+    padding-left: 28px;
+}
+/*connect部分结束*/
+
+/*footer部分开始*/
+footer{
+    width: 100%;
+    height: 56px;
+    background-color: #2f2f38;
+}
+footer p{
+    font: 12px "宋体";
+    color: white;
+    padding: 30px 0 0 100px;
+    float: left;
+}
+footer a{
+    font: 12px "宋体";
+    color: white;
+    float: right;
+    padding: 32px 46px 0 0;
+}
+/*footer部分结束*/

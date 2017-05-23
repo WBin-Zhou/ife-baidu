@@ -9,6 +9,7 @@
 ### task6：[通过HTML及CSS模拟报纸排版](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task6/index.html)
 ### task7：[实现常见的技术产品官网的页面架构及样式布局](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task7/index.html)
 ### task8：[响应式网格（栅格化）布局](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task8/index.html)
+### task9：[使用HTML/CSS实现一个复杂页面](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task9/index.html)
 ### task10：[Flexbox 布局练习](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task10/index.html)
 ### task12：[学习CSS 3的新特性](https://wbin-zhou.github.io/ife-baidu/%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B0%8F%E8%96%87%E5%AD%A6%E9%99%A2/task12/index.html)
 

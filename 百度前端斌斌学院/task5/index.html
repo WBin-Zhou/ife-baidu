@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（二）</title>
+    <style>
+        .queues {
+            display: flex;
+            height: 200px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        .queues .num {
+            display: inline-block;
+            width: 18px;
+            background-color: red;
+            color: white;
+            margin: 0 3px 3px;
+            vertical-align: bottom;
+            font: 12px "宋体";
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="inputValue" placeholder="请输入一个数">
+<button id="left-in">左侧入</button>
+<button id="right-in">右侧入</button>
+<button id="left-out">左侧出</button>
+<button id="right-out">右侧出</button>
+<button id="sort">冒泡排序</button>
+<div class="queues" id="queues">
+</div>
+<script>
+    function $$(id) {
+        return document.getElementById(id);
+    }
+    function registerEvent(target, type, handler) {
+        if (target.addEventListener) {
+            target.addEventListener(type, handler);
+        } else if (target.attachEvent) {
+            target.attachEvent("on" + type, handler);
+        } else {
+            target["on" + type] = handler;
+        }
+    }
+
+    (function () {
+        var left = document.getElementById("left-in");
+        var changeArr = {
+            arr: [],
+            leftPush: function () {
+                if (this.isNumbers() !== undefined) {
+                    this.arr.unshift(this.isNumbers());
+                    this.update(this.arr);
+                }
+            },
+            rightPush: function () {
+                if (this.isNumbers() !== undefined) {
+                    this.arr.push(this.isNumbers());
+                    this.update(this.arr);
+                }
+            },
+            leftOut: function () {
+                if (this.arr.length <= 0) {
+                    alert("删除完了")
+                } else {
+                    alert(this.arr.shift());
+                }
+                this.update(this.arr);
+            },
+            rightOut: function () {
+                if (this.arr.length <= 0) {
+                    alert("删除完了")
+                } else {
+                    alert(this.arr.pop());
+                }
+                this.update(this.arr);
+            },
+            update: function (arr) {
+                $$("queues").innerHTML = "";
+                for (var i = 0; i < arr.length; i++) {
+                    var newNum = document.createElement("span");
+                    newNum.className = "num";
+                    newNum.style.height = arr[i] * 2 + "px";
+                    newNum.innerHTML = arr[i];
+                    newNum.setAttribute("id", "li-" + i);
+                    $$("queues").appendChild(newNum);
+                }
+            },
+            isNumbers: function () {
+                var inputValue = document.getElementById("inputValue");
+                if (/^[0-9]+$/.test(inputValue.value)) {
+                    if (inputValue.value > 100 || inputValue.value < 10) {
+                        alert("请输入10-100整数");
+                    } else if (this.arr.length > 60) {
+                        alert("元素个数超出60个，不能再添加")
+                    } else {
+                        return inputValue.value;
+                    }
+                } else {
+                    alert('请输入整数');
+                }
+            }
+        };
+        registerEvent($$("left-in"), "click", function () {
+            changeArr.leftPush();
+        });
+        registerEvent($$("right-in"), "click", function () {
+            changeArr.rightPush();
+        });
+        registerEvent($$("left-out"), "click", function () {
+            changeArr.leftOut();
+        });
+        registerEvent($$("right-out"), "click", function () {
+            changeArr.rightOut();
+        });
+        registerEvent($$("sort"), "click", function () {
+            sortAnimation(bubbleSort, stateBubble);
+        });
+        $$("queues").onclick = function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            if (target.nodeName.toLowerCase() === "span") {
+                alert(target.innerHTML);
+                var spanId = parseInt(target.getAttribute("id").substr(3));
+                changeArr.arr.splice(spanId, 1);
+                target.remove();
+            } else {
+                return false;
+            }
+        };
+
+        var stateBubble = [];
+
+        function bubbleSort(arr) {
+            for (var n = 0; n < arr.length - 1; n++) {
+                for (var j = 0; j < arr.length - 1 - n; j++) {
+                    if (arr[j + 1] < arr[j]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                    stateBubble.push(JSON.parse(JSON.stringify(arr)));
+                }
+            }
+        }
+
+        function sortAnimation(sortAlgorithm, stateKind) {
+            var resArr = changeArr.arr;
+            sortAlgorithm(resArr);
+            var stateArr;
+            var timer = setInterval(function () {
+                stateArr = stateKind.shift();
+                if (stateKind.length > 0) {
+                    changeArr.update(stateArr);
+                } else {
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+
+    })();
+
+
+</script>
+</body>
+</html>

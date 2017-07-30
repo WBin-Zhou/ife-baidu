@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础JavaScript练习（三）</title>
+    <style>
+        .queues {
+            display: flex;
+            height: 200px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        .queues .num {
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid red;
+            min-width: 40px;
+            margin: 0 3px 3px;
+            vertical-align: bottom;
+            font: 16px/40px "宋体";
+            text-align: center;
+            height: 40px;
+            padding: 0 5px;
+        }
+
+        .select {
+            color: blue;
+            background-color: hotpink;
+        }
+
+    </style>
+</head>
+<body>
+<textarea name="" id="inputValue" cols="30" rows="5" placeholder="请输入内容"></textarea>
+<button id="left-in">左侧入</button>
+<button id="right-in">右侧入</button>
+<button id="left-out">左侧出</button>
+<button id="right-out">右侧出</button>
+<input type="text" id="searchWord" placeholder="请输入新词">
+<button id="search">查询</button>
+<div class="queues" id="queues">
+</div>
+<script>
+    function $$(id) {
+        return document.getElementById(id);
+    }
+    function registerEvent(target, type, handler) {
+        if (target.addEventListener) {
+            target.addEventListener(type, handler);
+        } else if (target.attachEvent) {
+            target.attachEvent("on" + type, handler);
+        } else {
+            target["on" + type] = handler;
+        }
+    }
+    (function () {
+        var changeArr = {
+            arr: [],
+            leftPush: function () {
+                if (this.testValue()) {
+                    this.arr = this.testValue().concat(this.arr);
+                    this.update();
+                }
+            },
+            rightPush: function () {
+                if (this.testValue()) {
+                    this.arr = this.arr.concat(this.testValue());
+                    this.update();
+                }
+            },
+            leftOut: function () {
+                if (this.arr.length <= 0) {
+                    alert("删除完了")
+                } else {
+                    alert(this.arr.shift());
+                }
+                this.update();
+            },
+            rightOut: function () {
+                if (this.arr.length <= 0) {
+                    alert("删除完了")
+                } else {
+                    alert(this.arr.pop());
+                }
+                this.update();
+            },
+            update: function () {
+                $$("queues").innerHTML = "";
+                for (var i = 0; i < this.arr.length; i++) {
+                    var newNum = document.createElement("span");
+                    newNum.className = "num";
+                    newNum.innerHTML = this.arr[i];
+                    newNum.setAttribute("id", "li-" + i);
+                    $$("queues").appendChild(newNum);
+                }
+            },
+            testValue: function () {
+                var inputValue = document.getElementById("inputValue").value.trim();
+                var arrWords = inputValue.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/).filter(function (e) {
+                    if (e != null && e.length > 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                return arrWords;
+            },
+            search: function () {
+                var textWord = $$("searchWord").value.trim();
+                var re = new RegExp(textWord);
+                for (var i = 0; i < $$("queues").children.length; i++) {
+                    $$("queues").children[i].classList.remove('select');
+                    if (textWord != '' && $$("queues").children[i].textContent.match(re)) {
+                        $$("queues").children[i].classList.add('select');
+                    }
+                }
+            }
+        };
+        registerEvent($$("left-in"), "click", function () {
+            changeArr.leftPush();
+        });
+        registerEvent($$("right-in"), "click", function () {
+            changeArr.rightPush();
+        });
+        registerEvent($$("left-out"), "click", function () {
+            changeArr.leftOut();
+        });
+        registerEvent($$("right-out"), "click", function () {
+            changeArr.rightOut();
+        });
+        registerEvent($$("search"), "click", function () {
+            changeArr.search();
+        });
+        $$("queues").onclick = function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            if (target.nodeName.toLowerCase() === "span") {
+                alert(target.innerHTML);
+                var spanId = parseInt(target.getAttribute("id").substr(3));
+                changeArr.arr.splice(spanId, 1);
+                target.remove();
+            } else {
+                return false;
+            }
+        }
+    })();
+
+</script>
+</body>
+</html>
